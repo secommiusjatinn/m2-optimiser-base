@@ -1,4 +1,12 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Scommerce OptimiserBase Module configuration file for defining all configurations required for this module
+ * @category   Scommerce
+ * @package    Scommerce_OptimiserBase
+ * @author     Scommerce Mage <core@scommerce-mage.com>
+ */
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <!-- Add new Tab -->
@@ -12,14 +20,14 @@
                  showInDefault="1"
                  showInWebsite="1"
                  showInStore="1">
-            <label>Optimiser Base</label>
+            <label>Website Speed Optimiser</label>
             <tab>scommerce</tab>
             <!-- resource tag name which we have to defined in the acl.xml -->
             <resource>Scommerce_OptimiserBase::config_optimiserbase</resource>
             <group id="general"
                    translate="label"
                    type="text"
-                   sortOrder="20"
+                   sortOrder="10"
                    showInDefault="1"
                    showInWebsite="1"
                    showInStore="1">
@@ -27,7 +35,7 @@
                 <field id="enabled"
                            translate="label"
                            type="select"
-                           sortOrder="30"
+                           sortOrder="10"
                            showInDefault="1"
                            showInWebsite="1"
                            showInStore="1">
@@ -37,7 +45,7 @@
                 <field id="license_key"
                                translate="label"
                                type="text"
-                               sortOrder="40"
+                               sortOrder="20"
                                showInDefault="1"
                                showInWebsite="1" showInStore="1">
                     <label>License Key</label>

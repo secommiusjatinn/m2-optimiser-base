@@ -1,10 +1,10 @@
 <?php
 /**
- * OptimiserBase Helper  
+ *  Scommerce OptimiserBase helper class for common functions and retrieving configuration values
  *
  * @category   Scommerce
  * @package    Scommerce_OptimiserBase
- * @author     Sommerce Mage <core@scommerce-mage.co.uk>
+ * @author     Scommerce Mage <core@scommerce-mage.com>
  */
 
 namespace Scommerce\OptimiserBase\Helper;
@@ -23,8 +23,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     const ENABLED              = 'scommerce_optimiserbase/general/enabled';
     
     const LICENSE_KEY          = 'scommerce_optimiserbase/general/license_key';
-      
 
+      
     /**
      * @var \Scommerce\Core\Helper\Data
      */
@@ -34,6 +34,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * __construct
      * 
      * @param \Magento\Framework\App\Helper\Context $context
+     * @param \Scommerce\Core\Helper\Data $coreHelper
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
@@ -41,11 +42,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     ) {
         parent::__construct($context);
         $this->coreHelper = $coreHelper;
-    }
-    
+    }    
     
     /**
-     * Is Catalog Url module active
+     * Check, if module active or not
      *
      * @return bool
      */
