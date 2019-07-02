@@ -22,7 +22,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */    
     const ENABLED              = 'scommerce_optimiserbase/general/enabled';
     
-    const LICENSE_KEY = 'scommerce_optimiserbase/general/license_key';
+    const LICENSE_KEY          = 'scommerce_optimiserbase/general/license_key';
       
 
     /**
@@ -72,7 +72,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function isLicenseValid()
     {
-        $sku = strtolower(str_replace('\\Helper\\Data','',str_replace('Scommerce\\','',get_class($this))));
+        $sku = strtolower(str_replace('\\Helper\\Data','',str_replace('Scommerce\\','',get_class())));
         return $this->coreHelper->isLicenseValid($this->getLicenseKey(),$sku);
     }
     
