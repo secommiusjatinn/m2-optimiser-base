@@ -1,4 +1,12 @@
 <?xml version="1.0"?>
+<!--
+/**
+ * Scommerce InfiniteScrolling Module ACL file for defining permission for menus, configuration and individual actions
+ * @category   Scommerce
+ * @package    Scommerce_OptimiserBase
+ * @author     Scommerce Mage <core@scommerce-mage.com>
+ */
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
     <acl>
