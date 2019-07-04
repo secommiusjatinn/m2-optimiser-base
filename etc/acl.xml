@@ -15,14 +15,9 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Scommerce_Core::config"
-                                      title="Scommerce"
-                                      translate="title"
-                                      sortOrder="10">
                                 <!-- this resource id we can use in system.xml for section -->
-                                <resource id="Scommerce_OptimiserBase::config_optimiserbase" title="Optimiser Base"
+                                <resource id="Scommerce_OptimiserBase::config_optimiserbase" title="Scommerce Website Speed Optimiser"
                                           sortOrder="10"/>
-                            </resource>
                         </resource>
                     </resource>
                 </resource>
