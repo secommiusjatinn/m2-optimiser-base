@@ -20,7 +20,7 @@
                  showInDefault="1"
                  showInWebsite="1"
                  showInStore="1">
-            <label>Website Speed Optimiser</label>
+            <label>Optimiser Base</label>
             <tab>scommerce</tab>
             <!-- resource tag name which we have to defined in the acl.xml -->
             <resource>Scommerce_OptimiserBase::config_optimiserbase</resource>

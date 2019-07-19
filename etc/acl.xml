@@ -16,7 +16,7 @@
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
                                 <!-- this resource id we can use in system.xml for section -->
-                                <resource id="Scommerce_OptimiserBase::config_optimiserbase" title="Scommerce Website Speed Optimiser"
+                                <resource id="Scommerce_OptimiserBase::config_optimiserbase" title="Scommerce Optimiser Base"
                                           sortOrder="10"/>
                         </resource>
                     </resource>
