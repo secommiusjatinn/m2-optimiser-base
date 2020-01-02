@@ -61,7 +61,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @return string
      */
     public function getLicenseKey()
-    {
+    {       
         return $this->getValue(self::LICENSE_KEY);
     }
     
@@ -71,9 +71,15 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @return bool
      */
     public function isLicenseValid()
-    {
-        $sku = strtolower(str_replace('\\Helper\\Data','',str_replace('Scommerce\\','',get_class())));
-        return $this->coreHelper->isLicenseValid($this->getLicenseKey(),$sku);
+    {         
+        $seoModuleSkus = array('optimiserbase', 'lazyloading', 'infinitescrolling', 'speedoptimiser', 'imageoptimiser');
+        $isValid = false;
+        foreach ($seoModuleSkus as $sku) {
+            $isValid = $this->coreHelper->isLicenseValid($this->getLicenseKey(), $sku);
+            if ($isValid)
+                break;
+        }
+        return $isValid;
     }
     
     /**
