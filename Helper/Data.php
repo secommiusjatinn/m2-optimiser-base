@@ -72,7 +72,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function isLicenseValid()
     {         
-        $seoModuleSkus = array('optimiserbase', 'lazyloading', 'infinitescrolling', 'speedoptimiser', 'imageoptimiser', 'cachewarmer');
+        $seoModuleSkus = array('optimiserbase', 'lazyload', 'infinitescrolling', 'speedoptimiser', 'imageoptimizer', 'fullpagecachewarmer');
         $isValid = false;
         foreach ($seoModuleSkus as $sku) {
             $isValid = $this->coreHelper->isLicenseValid($this->getLicenseKey(), $sku);
