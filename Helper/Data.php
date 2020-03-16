@@ -11,7 +11,7 @@ namespace Scommerce\OptimiserBase\Helper;
 
 use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\App\Helper\Context;
-use Scommerce\Core\Helper\Data;
+use Scommerce\Core\Helper\Data as CoreHelper;
 use Magento\Framework\App\Helper\AbstractHelper;
 
 /**
@@ -36,17 +36,17 @@ class Data extends AbstractHelper
     /**
      * @var bool
      */
-    protected $_enabled = null;
+    static $enabled = null;
 
     /**
      * __construct
      * 
      * @param Context $context
-     * @param Data $coreHelper
+     * @param CoreHelper $coreHelper
      */
     public function __construct(
         Context $context,
-        Data $coreHelper
+        CoreHelper $coreHelper
     ) {
         parent::__construct($context);
         $this->coreHelper = $coreHelper;
@@ -59,11 +59,11 @@ class Data extends AbstractHelper
      */
     public function isEnabled()
     {
-        if ($this->_enabled == null) {
+        if (self::$enabled == null) {
             $enabled = $this->isSetFlag(self::ENABLED);
-            $this->_enabled = $this->isCliMode() ? $enabled : $enabled && $this->isLicenseValid();
+            self::$enabled = $this->isCliMode() ? $enabled : $enabled && $this->isLicenseValid();
         }
-        return $this->_enabled;
+        return self::$enabled;
     }
 
     /**
