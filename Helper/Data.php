@@ -10,12 +10,15 @@
 namespace Scommerce\OptimiserBase\Helper;
 
 use Magento\Store\Model\ScopeInterface;
+use Magento\Framework\App\Helper\Context;
+use Scommerce\Core\Helper\Data;
+use Magento\Framework\App\Helper\AbstractHelper;
 
 /**
  * Class Data
  * @package Scommerce_OptimiserBase
  */
-class Data extends \Magento\Framework\App\Helper\AbstractHelper
+class Data extends AbstractHelper
 {
     /**
      * @const config path
@@ -26,19 +29,24 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
       
     /**
-     * @var \Scommerce\Core\Helper\Data
+     * @var Data
      */
     public $coreHelper;
+    
+    /**
+     * @var bool
+     */
+    protected $_enabled = null;
 
     /**
      * __construct
      * 
-     * @param \Magento\Framework\App\Helper\Context $context
-     * @param \Scommerce\Core\Helper\Data $coreHelper
+     * @param Context $context
+     * @param Data $coreHelper
      */
     public function __construct(
-        \Magento\Framework\App\Helper\Context $context,
-        \Scommerce\Core\Helper\Data $coreHelper
+        Context $context,
+        Data $coreHelper
     ) {
         parent::__construct($context);
         $this->coreHelper = $coreHelper;
@@ -51,10 +59,13 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function isEnabled()
     {
-        $enabled = $this->isSetFlag(self::ENABLED);
-        return $this->isCliMode() ? $enabled : $enabled && $this->isLicenseValid();
+        if ($this->_enabled == null) {
+            $enabled = $this->isSetFlag(self::ENABLED);
+            $this->_enabled = $this->isCliMode() ? $enabled : $enabled && $this->isLicenseValid();
+        }
+        return $this->_enabled;
     }
-    
+
     /**
      * Returns license key administration configuration option
      *
