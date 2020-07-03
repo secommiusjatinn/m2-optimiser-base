@@ -27,7 +27,6 @@ class Data extends AbstractHelper
     
     const LICENSE_KEY          = 'scommerce_optimiserbase/general/license_key';
 
-      
     /**
      * @var Data
      */
@@ -75,22 +74,16 @@ class Data extends AbstractHelper
     {       
         return $this->getValue(self::LICENSE_KEY);
     }
-    
+
     /**
      * Returns whether license key is valid or not
      *
      * @return bool
      */
     public function isLicenseValid()
-    {         
-        $seoModuleSkus = array('optimiserbase', 'lazyloading', 'infinitescrolling', 'speedoptimiser', 'imageoptimiser', 'cachewarmer');
-        $isValid = false;
-        foreach ($seoModuleSkus as $sku) {
-            $isValid = $this->coreHelper->isLicenseValid($this->getLicenseKey(), $sku);
-            if ($isValid)
-                break;
-        }
-        return $isValid;
+    {
+        $sku = strtolower(str_replace('\\Helper\\Data', '', str_replace('Scommerce\\', '', get_class())));
+        return $this->coreHelper->isLicenseValid($this->getLicenseKey(), $sku);
     }
     
     /**

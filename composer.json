@@ -7,8 +7,8 @@
   },
   
   "type": "magento2-module",
-  "license": "Commercial",
-  "version": "2.0.2",
+  "license": "GPL-3.0",
+  "version": "2.0.3",
   "authors": [
     {
       "name": "Scommerce Mage",
