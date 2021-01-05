@@ -41,7 +41,7 @@
                            showInStore="1">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[This setting will enable or disable all modules related to optimisation. This includes <a href="https://www.scommerce-mage.com/magento-2-image-optimizer.html"><strong>Image Optimiser</strong></a>, <a href="https://www.scommerce-mage.com/magento-2-lazy-load-image-extension.html"><strong>Lazy Loading</strong></a>, <a href="https://www.scommerce-mage.com/magento-2-infinite-scroll.html"><strong>Infinite Scrolling</strong></a>, <a href="https://www.scommerce-mage.com/magento-2-full-page-cache-warmer.html"><strong>Cache Warmer</strong></a> and <a href="https://www.scommerce-mage.com/magento-2-google-page-speed-optimizer.html"><strong>Google Speed Optimiser</strong></a>]]></comment>
+                    <comment><![CDATA[This setting will enable or disable all modules related to optimisation. This includes <a href="https://www.scommerce-mage.com/magento-2-image-optimizer.html"><strong>Image Optimiser</strong></a>, <a href="https://www.scommerce-mage.com/magento-2-lazy-load-image-extension.html"><strong>Lazy Loading</strong></a>, <a href="https://www.scommerce-mage.com/magento-2-full-page-cache-warmer.html"><strong>Cache Warmer</strong></a> and <a href="https://www.scommerce-mage.com/magento-2-google-page-speed-optimizer.html"><strong>Google Speed Optimiser</strong></a>]]></comment>
                 </field>
                 <field id="license_key"
                                translate="label comment"
