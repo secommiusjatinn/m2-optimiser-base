@@ -3,7 +3,7 @@
   "description": "Optimiser Base for Magento 2.0",
   "require": {
     "php": ">=7.2.0",
-    "scommerce/core": "2.0.*"
+    "scommerce/core": "2.0.4"
   },
   
   "type": "magento2-module",
